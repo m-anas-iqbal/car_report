@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMVTIS - VIN REPORT GENERATED</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+	<style>
+		body{
+			width: 8.5in;
+			margin: auto;
+			font-family: 'Noto Sans', sans-serif;
+			color: #546875;
+			background-color: #FBFBFB;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.header{
+			background: white;
+			margin-top: 30px;
+		}
+		.boxsh{
+			box-shadow: 0 6px 10px 0 rgba(0,0,0,.03)
+		}
+		.tile {
+			font-size: 15px;
+		}
+		.tile img {
+			font-size: 15px;
+			position: relative;
+			cursor: pointer;
+			width: 120px;
+		}
+		 
+		.tile img:hover{ 
+		}
+		.tile p {
+			font-size: 15px;
+		}
+		.tile img:hover ~ p{
+			color: black;
+		}
+		.page{
+			page-break-before: always;
+		}
+		.item-heading{}
+		.item-heading h1{
+			font-size: 28px;
+			height: 45px;
+			color: black;
+			font-weight: 600;
+		}
+		.tilecard{
+			box-shadow: 0 6px 10px 0 rgba(0,0,0,.03);
+			border: 1px solid #eff3fb;
+		}
+	</style>
+</head>
+<body>
+    <div class="p-3 header boxsh">
+	  <div class="row">
+		<div class="col-6 d-flex">
+            <img src="https://vinsuperinfo.com/images/nmvtis-logo.jpg" alt="" width="120" class="m-auto ms-0" >
+        </div>
+		<div class="col-6 text-end">
+		  <ul>
+			<li><strong>Vehicle History Report (BC) #</strong>: {{$report_id}}</li>
+			<li><strong>Report Date</strong>: August 4, 2021 | 10:56 PM EST</li>
+			<li><strong>Report Status</strong>: Complete</li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+    <div class="vehiclesummary p-3">
+        <h1> {{$vindata['ModelYear']}} {{$vindata['Make']}} {{$vindata['Model']}} </h1> 
+        <ul>
+            <li>
+				{{$engine}} | {{$vindata['EngineCylinders']}}
+            </li>
+            <li>
+                <strong>{{$vindata['VIN']}}</strong>
+            </li>
+            <li>
+                <strong>Country of Assembly: {{$vindata['Manufacturer']}}</strong>
+            </li>
+            <li>
+                <strong>Last Reported Odometer: n/a </strong>
+            </li>
+			<li>
+                <strong>Vehicle Type: {{$vindata['VehicleType']}} </strong>
+            </li>
+        </ul>
+        <!-- <label class="badge bg-primary p-2 mt-2 text-start">NO REPORTED <br> ACCIDENTS</label> -->
+		<img src="{{asset('images/nr/accident-free@1x.png')}}" class=" mt-3" alt="" style="width: 80px;">
+
+    </div>
+	<div class="summary_icons p-3 bg-white border-top">
+		<div class="row">
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/accident-damage-tile.png')}}" alt="">
+					<p>No Accident/Damage Records Found</p>
+				</div>
+			</div>
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/registration-tile.png')}}" alt="">
+					<p>Last Registered In: <br />
+						<strong>British Columbia (Normal)</strong>
+					</p>
+				</div>
+			</div>
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/service-records-tile.png')}}" alt="">
+					<p><strong>0</strong>  Service Records Found</p>
+				</div>
+			</div>
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/bad.png')}}" alt="" style="border: 8px solid #E0F6FF;border-radius: 100%;background: #C5EEFF;padding: 8px;">
+					<p><strong>0</strong>  Complaints </p>
+				</div>
+			</div>
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/recalls-tile.png')}}" alt="">
+					<p>No Open Recalls Found</p>
+				</div>
+			</div>
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/stolen-tile.png')}}" alt="">
+					<p>Not Actively Declared Stolen</p>
+				</div>
+			</div>
+			<div class="col-4 mt-3 mb-3">
+				<div class="text-center  tile">
+					<img src="{{asset('images/nr/import-tile.png')}}" alt="">
+					<p> No Import Record Found </p>
+				</div>
+			</div>
+			<div class="col-8 mt-3 mb-3">
+				<div class="card p-3 tilecard">
+					<div class="card-body">
+						<h3><strong>Questions?</strong> We're here to help. </h3>
+						<a href="mailto:NMVTIS@usdoj.gov">NMVTIS@usdoj.gov</a>  
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-12">
+				 
+				<div class="alert alert-secondary d-flex align-items-center rounded-0 bg-white border-left"  style="border-left-width: 3px;" role="alert">
+					 
+					<div>
+						This vehicle history report is based on information that was reported and available to NMVTIS as of August 4, 2021 (or once all the data was collected from our data sources and the report was complete). NMVTIS draws on billions of data records from thousands of sources, and we receive new historical data records every day. There may be other information about this vehicle that has not been reported to NMVTIS. When buying a used vehicle, we always recommend using a NMVTIS Vehicle History Report, along with a vehicle inspection and test drive, to make an informed decision. 
+					</div>
+				  </div>
+			</div>
+		</div>
+	</div> 
+	<div class="page">
+		<h1 class="pt-5 pb-5 fw-bolder"> Vehicle Specification</h1>
+		<div class="bg-white p-5 border-top ">
+			<table class="table table-bordered">
+				<tr>
+					<td width="50%">VIN:</td>
+					<th>{{$vindata['VIN']}}</th>
+				</tr>
+				<tr>
+					<td width="50%">Year:</td>
+					<th>{{$vindata['ModelYear']}}</th>
+				</tr>
+				<tr>
+					<td width="50%">Make: </td>
+					<th>{{$vindata['Make']}}</th>
+				</tr>
+				<tr>
+					<td width="50%">Manufacturer: </td>
+					<th>{{$vindata['Manufacturer']}}</th>
+				</tr>
+				<tr>
+					<td width="50%">Model:</td>
+					<th>
+					@if($vindata['Model'] == "")
+						Unknown
+					@else
+						{{$vindata['Model']}}
+					@endif
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Trim:</td>
+					<th>
+					@if($vindata['Trim'] == "")
+						N/A
+					@else
+						{{$vindata['Trim']}}
+					@endif 
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Engine:</td>
+					<th>{{$engine}}</th>
+				</tr>
+				<tr>
+					<td width="50%">Style:</td>
+					<th>
+					@if($vindata['BodyClass'] == "")
+						N/A
+					@else
+						{{$vindata['BodyClass']}}
+					@endif  
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Made In</td>
+					<th>
+					@if($vindata['PlantCountry'] == "")
+						N/A
+					@else
+						{{$vindata['PlantCountry']}}
+					@endif   
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Steering Type:</td>
+					<th>
+					@if($vindata['SteeringLocation'] == "")
+						N/A
+					@else
+						{{$vindata['SteeringLocation']}}
+					@endif  
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Anti Brake System:</td>
+					<th>
+					@if($vindata['ABS'] == "")
+						N/A
+					@else
+						{{$vindata['ABS']}}
+					@endif 
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Doors:</td>
+					<th>
+					@if($vindata['Doors'] == "")
+						N/A
+					@else
+						{{$vindata['Doors']}}
+					@endif 
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Drive Type:</td>
+					<th>
+					@if($vindata['DriveType'] == "")
+						N/A
+					@else
+						{{$vindata['DriveType']}}
+					@endif 
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Engine Configuration:</td>
+					<th>
+					@if($vindata['EngineConfiguration'] == "")
+						N/A
+					@else
+						{{$vindata['EngineConfiguration']}}
+					@endif 
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Engine Cylinders:</td>
+					<th>
+					@if($vindata['EngineCylinders'] == "")
+						N/A
+					@else
+						{{$vindata['EngineCylinders']}}
+					@endif 
+					</th>
+				</tr>
+				<tr>
+					<td width="50%">Engine HP:</td>
+					<th>
+					@if($vindata['EngineHP'] == "")
+						N/A
+					@else
+						{{$vindata['EngineHP']}}
+					@endif 
+					</th>
+				</tr> 
+				<tr>
+					<td width="50%">GVWR:</td>
+					<th>
+					@if($vindata['GVWR'] == "")
+						N/A
+					@else
+						{{$vindata['GVWR']}}
+					@endif 
+					</th>
+				</tr> 
+			</table>
+		</div>
+	</div>
+	<div class="page">
+		<h1 class="pt-5 pb-5 fw-bolder"> Vehicle History Report (BC)</h1>
+		<div class="bg-white p-5 border-top ">
+			<div class="item-details border-bottom pb-4">
+				<div class="item-heading d-flex">
+					<img src="{{asset('images/nr/accident-damage.png')}}" alt="">
+					<h1 class="m-auto ms-2">Accident/Damage</h1>
+				</div>
+				<div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+					<img src="{{asset('images/nr/checked.png')}}" style="width: 20px;margin-right: 15px;" />
+					<div>
+					  There are no accidents/damage reported on this vehicle.
+					</div>
+				</div>
+			</div>
+			<div class="item-details border-bottom pb-4 pt-5">
+				<div class="item-heading d-flex">
+					<img src="{{asset('images/nr/registration.png')}}" alt="">
+					<h1 class="m-auto ms-2">Registration</h1>
+				</div>
+				<div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+					<img src="{{asset('images/nr/checked.png')}}" style="width: 20px;margin-right: 15px;" />
+					<div>
+					   This vehicle has been registered in the following locations in US (listed oldest to newest):
+					   <ul>
+						<li>{{$vindata['Manufacturer']}}</li>
+					   </ul>
+					</div>
+				</div>
+			</div>
+			<div class="item-details border-bottom pb-4 pt-5">
+				<div class="item-heading d-flex">
+					<img src="{{asset('images/nr/recalls.png')}}" alt="">
+					<h1 class="m-auto ms-2">Open Recalls</h1>
+				</div>
+				<div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+					<img src="{{asset('images/nr/checked.png')}}" style="width: 20px;margin-right: 15px;" />
+					<div>
+						No safety recall information available as of the date/time that this report was generated. For additional safety recall information and non-safety related recall campaigns
+					</div>
+				</div>
+			</div>
+			<div class="item-details border-bottom pb-4 pt-5">
+				<div class="item-heading d-flex">
+					<img src="{{asset('images/nr/stolen.png')}}" alt="">
+					<h1 class="m-auto ms-2">Stolen Vehicle Check</h1>
+				</div>
+				<div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+					<img src="{{asset('images/nr/checked.png')}}" style="width: 20px;margin-right: 15px;" />
+					<div>
+					   This vehicle is not actively declared stolen. 
+					</div>
+				</div>
+			</div>
+			<div class="item-details border-bottom pb-4 pt-5">
+				<div class="item-heading d-flex">
+					<img src="{{asset('images/nr/detailed-history.png')}}" alt="">
+					<h1 class="m-auto ms-2">Complaints</h1>
+				</div>
+				<div class="alert alert-success d-flex align-items-center mt-3" role="alert">
+					<img src="{{asset('images/nr/checked.png')}}" style="width: 20px;margin-right: 15px;" />
+					<div>
+					  This vehicle does not have any complaints. 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<h1 class="pt-5 pb-5 fw-bolder">NMVTIS Consumer Access Product Disclaimer</h1>
+		<div class="bg-white p-5 border-top">
+		<div class="text-center">
+			<img src="{{asset('images/nmvtislogor.png')}}" /> 
+		</div>
+			<br />
+				<p>
+					NMVTIS Consumer Access Product DisclaimerThe National Motor Vehicle Title Information System (NMVTIS) is an electronic system that contains information on certainautomobiles titled in the United States. NMVTIS is intended to serve as a reliable source of title and <a href="https://vehiclehistory.bja.ojp.gov/nmvtis_glossary">brand</a> history forautomobiles, but it does not contain detailed information regarding a vehicle’s repair history
+				</p>
+				<p>
+					All states, insurance companies, and junk and salvage yards are required by federal law to regularly report information toNMVTIS. However, NMVTIS does not contain information on all motor vehicles in the United States because <a href="https://vehiclehistory.bja.ojp.gov/nmvtis_states">some states</a> are not yet providing their vehicle data to the system. Currently, the data provided to NMVTIS by states is provided in avariety of time frames; while some states report and update NMVTIS data in “real-time” (as title transactions occur), otherstates send updates less frequently, such as once every 24 hours or within a period of days.
+				</p>
+				<p>
+					Information on previous, significant vehicle damage may not be included in the system if the vehicle was neverdetermined by an insurance company (or other appropriate entity) to be a “total loss” or branded by a state titling agency.Conversely, an insurance carrier may be required to report a “total loss” even if the vehicle’s titling-state has notdetermined the vehicle to be “salvage” or “junk.”
+				</p>
+				<p>
+					A vehicle history report is NOT a substitute for an independent vehicle inspection. Before making a decision to purchase avehicle, consumers are <strong> strongly encouraged to also obtain an independent vehicle inspection</strong> to ensure the vehicledoes not have hidden damage. The <a href="https://vehiclehistory.bja.ojp.gov/nmvtis_vehiclehistory">Approved NMVTIS Data Providers</a> (look for the NMVTIS logo) can include vehiclecondition data from sources other than NMVTIS.
+				</p>
+				<p>NMVTIS data <strong>INCLUDES</strong> (as available by those entities required to report to the System):</p>
+				<ul style="list-style: inherit;text-align: left;">
+					<li>Information from <a href="https://vehiclehistory.bja.ojp.gov/nmvtis_states">participating</a> state motor vehicle titling agencies.</li>
+					<li>
+						Information on automobiles, buses, trucks, motorcycles, recreational vehicles, motor homes, and tractors. NMVTISmay not currently include commercial vehicles if those vehicles are not included in a state’s primary database fortitle records (in some states, those vehicles are managed by a separate state agency), although these records maybe added at a later time.
+					</li>
+					<li>
+						Information on “brands” applied to vehicles provided by participating state motor vehicle titling agencies. Brandtypes and definitions vary by state, but may provide useful information about the condition or prior use of thevehicle.
+					</li>
+					<li>Most recent odometer reading in the state’s title record.</li>
+					<li>
+						Information from insurance companies, and auto recyclers, including junk and salvage yards, that is required bylaw to be reported to the system, beginning March 31, 2009. This information will include if the vehicle wasdetermined to be a “total loss” by an insurance carrier.
+					</li>
+					<li>
+						Information from junk and salvage yards receiving a “cash for clunker” vehicle traded-in under the ConsumerAssistance to Recycle and Save Act of 2009 (CARS) Program.
+					</li> 
+				</ul>
+				<p>
+					Consumers are advised to visit <a href="https://vehiclehistory.bja.ojp.gov/">vehiclehistory.bja.ojp.gov</a> for details on how to interpret the information in the system andunderstand the meaning of various labels applied to vehicles by the participating state motor vehicle titling agencies.
+				</p> 
+		</div>
+	</div>
+</body>
+</html>

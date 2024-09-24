@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg fill="currentColor" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path fill="#2E7D32" fill-rule="nonzero" d="M11.137 3.999c-.31.463-.564.966-.753 1.5L5.5 5.5 4 10h6.384A6.77 6.77 0 0 0 13 13.364V18H5v1c0 .55-.45 1-1 1H3c-.55 0-1-.45-1-1v-8l2.08-5.99C4.29 4.42 4.84 4 5.5 4ZM5.5 12c-.83 0-1.5.67-1.5 1.5S4.67 15 5.5 15 7 14.33 7 13.5 6.33 12 5.5 12Z"/>
+  </g>
+  <g>
+    <path fill="#9E9E9E" fill-rule="nonzero" d="M17 3c-.332 0-.673.039-1.012.114l-1.519.335 3.364 3.24v2.144h-2.146l-3.244-3.35-.332 1.516A4.631 4.631 0 0 0 12 8a5 5 0 0 0 2.5 4.326V18.5c0 1.378 1.122 2.5 2.5 2.5s2.5-1.122 2.5-2.5v-6.174A5 5 0 0 0 22 8c0-2.758-2.242-5-5-5Z"/>
+  </g>
+</svg>

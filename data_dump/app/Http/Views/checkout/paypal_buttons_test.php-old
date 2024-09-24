@@ -1,0 +1,80 @@
+<!-- Package One Start -->
+
+	<div id="package_one_button">
+	 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" class="paypalForm">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="Z4PPY3GRFZTGQ">
+			<input type="image" src="{{asset('images/paypal_button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form> 
+	</div> 
+
+	
+<!-- Package One End -->
+
+<!-- Package Two Start -->
+
+	<div id="package_two_button">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div> 
+
+<!-- Package Two End -->
+	
+<!-- Package Three Start-->
+	
+	<div id="package_three_button">
+	
+	</div>
+
+<!-- Package Three End -->
+
+<!-- Package Four Start-->
+	
+	<div id="package_four_button">
+		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="EVW5X739GG7DS">
+		<input type="image" src="{{asset('images/paypal_button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	
+
+
+<!-- Package Four End -->
+	
+<!-- Package Five Start-->
+
+	<div id="package_five_button">
+		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="95Z3QDNP25SLL">
+			<input type="image" src="{{asset('images/paypal_button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+	
+
+
+<!-- Package Five End -->
+
+<!-- Package Six Start-->
+
+	<div id="package_six_button">
+		<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="U4WMZBZN59Z82">
+			<input type="image" src="{{asset('images/paypal_button.png')}}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	</div>
+
+<!-- Package Six End -->
+
+
+
